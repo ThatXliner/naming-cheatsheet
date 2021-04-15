@@ -263,7 +263,7 @@ function createConfigFile(fileName) {
 
 ### `acquire`
 
-[create](#create) but something must be returned.
+Like [create](#create) but something must be returned.
 
 ```js
 function acquireFreeMemory(size) {
