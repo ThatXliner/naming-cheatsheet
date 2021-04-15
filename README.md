@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://github.com/kettanaito/naming-cheatsheet">
+  <a href="https://github.com/ThatXliner/naming-cheatsheet">
     <img src="./naming-cheatsheet.png" alt="Naming cheatsheet" />
   </a>
 </p>
 
-# Naming cheatsheet
+# Naming cheatsheet (slightly modified by @ThatXliner)
 
 - [English language](#english-language)
 - [Naming convention](#naming-convention)
@@ -151,7 +151,7 @@ The verb part of your function name. The most important part responsible for des
 
 ### `get`
 
-Accesses data immediately (i.e. shorthand getter of internal data).
+Accesses data immediately (e.g. shorthand getter of internal data).
 
 ```js
 function getFruitCount() {
@@ -196,7 +196,7 @@ console.log(fruits) // 5
 
 ### `fetch`
 
-Request for some data, which takes some indeterminate time (i.e. async request).
+Request for some data, which takes some indeterminate time (e.g. async request, file reading).
 
 ```js
 function fetchPosts(postCount) {
@@ -246,6 +246,32 @@ function composePageUrl(pageName, pageId) {
 ```
 
 > See also [get](#get).
+
+### `create`
+
+Create something out of thin air! Just kidding!
+
+Functions like this don't need to return something. It's just to make sure something is made and it exists. Like a filesystem folder or maybe an object.
+
+```js
+function createConfigFile(fileName) {
+    return os.touch(fileName)
+}
+```
+
+> See also [compose](#compose).
+
+### `acquire`
+
+[create](#create) but something must be returned.
+
+```js
+function acquireFreeMemory(size) {
+    return allocateMemory(size)
+}
+```
+
+> See also [compose](#compose), [get](#get), [create](#create).
 
 ### `handle`
 
